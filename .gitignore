@@ -89,6 +89,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+# Virtualenv created in the repository root (lib/ is ignored above)
+/bin/
+/pyvenv.cfg
+/CACHEDIR.TAG
 
 # Spyder project settings
 .spyderproject
@@ -111,5 +115,13 @@ settings.json
 
 # output files
 *.csv
+tripinfo*.xml
 /logs
 /wandb
+
+# paper build artifacts
+/paper/build
+
+# Experiment outputs and local CLM weights (regenerate with experiments/*.py / rapid-mlx-convert-clm-head)
+/outputs
+/clm-v0.1-mlx

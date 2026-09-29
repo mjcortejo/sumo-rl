@@ -1,0 +1,28 @@
+\section{Introduction}
+\label{sec:introduction}
+
+% Outline:
+% 1. Why adaptive traffic signal control matters (congestion, delay, emissions).
+% 2. Existing approaches: fixed-time and actuated plans, max-pressure, and RL controllers. RL needs long,
+%    scenario-specific training and generalizes poorly to unseen intersections and demand.
+% 3. Generative LLM controllers exist but are slow and nondeterministic. CLMs are a new class of model that ranks a
+%    fixed set of candidate actions against a state instead of generating text, which suits signal control, where
+%    the candidate set (green phases) is small and stable.
+% 4. This paper: first study of CLMs for signal control, comparing the base and a traffic-specialized CLM-8B against
+%    fixed-time, max-pressure, Q-learning and deep RL baselines, evaluated on held-out traffic.
+% 5. Research questions RQ1--RQ5 (keep in sync with RESEARCH_TODO.md).
+% 6. Contributions list.
+
+\todo[inline]{Draft the introduction following the outline in the source comments.}
+
+The research questions are:
+\begin{itemize}
+  \item \textbf{RQ1:} Can the \clmbase, used zero-shot, outperform fixed-time control and match max-pressure?
+  \item \textbf{RQ2:} Does a \clmtraffic{} outperform the \clmbase, and does it match or outperform Q-learning and
+        deep RL?
+  \item \textbf{RQ3:} How much data does each method need to reach its performance?
+  \item \textbf{RQ4:} Do the CLM controllers generalize to unseen intersections and demand patterns?
+  \item \textbf{RQ5:} Is CLM inference fast enough for real-time signal control?
+\end{itemize}
+
+\todo[inline]{Contributions list.}

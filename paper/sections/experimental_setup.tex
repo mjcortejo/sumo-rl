@@ -1,0 +1,27 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Simulation and Scenarios}
+% SUMO version, SUMO-RL version, scenarios (single, 2-way single, big intersection, 4x4 grid, RESCO), demand levels.
+All experiments use the \sumo{} microscopic traffic simulator~\cite{lopez2018microscopic} through the
+\sumorl{} environment~\cite{AlegreSUMORL}.
+
+\todo[inline]{Scenarios table (network, number of signals and phases, demand).}
+
+\subsection{Train, Validation and Test Splits}
+% Route files and seeds per split; out-of-distribution test set; learned policies frozen at test time; non-learning
+% controllers run on the test split only. Point to the splits config file.
+\todo[inline]{Split protocol.}
+
+\subsection{Controllers}
+% Fixed-time (Webster), max-pressure, Q-learning, DQN, PPO, base CLM-8B, traffic-specialized CLM-8B.
+% Hyperparameters and training budgets (full tables can go in an appendix).
+\todo[inline]{Controllers and hyperparameters.}
+
+\subsection{Metrics}
+% Average waiting time, travel time, queue length, throughput, delay at entry, CO2 (optional), decision latency.
+% Number of seeds, confidence intervals, statistical tests.
+\todo[inline]{Metrics and statistical protocol.}
+
+\subsection{Hardware}
+\todo[inline]{Hardware used for simulation, RL training and CLM inference.}

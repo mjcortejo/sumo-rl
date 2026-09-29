@@ -1,0 +1,28 @@
+\section{Method}
+\label{sec:method}
+
+% Describe what the code in sumo_rl/agents/clm_agent.py actually does; re-check the code before editing.
+
+\subsection{Problem Formulation}
+% Signal control as a sequential decision problem: at each decision step (every delta_time seconds, subject to
+% min/max green and yellow), the controller picks the next green phase.
+\todo[inline]{Formulation: decision interval, action set, constraints.}
+
+\subsection{Describing the Intersection as Text}
+% describe_state / lane_labels: how lanes, queues, waiting times and the current phase become a text state.
+% Include one real example state string (from a run with -v) in a figure or listing.
+\todo[inline]{State description, with an example.}
+
+\subsection{Describing Phases as Candidate Actions}
+% describe_phases: each green phase as a text description of its movements (approach + turn).
+\todo[inline]{Phase descriptions, with an example.}
+
+\subsection{Ranking Phases with a CLM}
+% Query (DEFAULT_QUESTION) + state vs. candidate phases; score = dot product of embeddings; pick the argmax.
+% Caching of phase embeddings and the client-side LRU cache.
+\todo[inline]{Ranking and caching.}
+
+\subsection{Traffic Specialization}
+% clm_collect_labels.py: lookahead labelling in a shadow simulation, positive = best phase over the horizon.
+% Fine-tuning of the projection heads only (backbone frozen). Labels from the train split only.
+\todo[inline]{Fine-tuning procedure, once the teacher/label source is decided.}

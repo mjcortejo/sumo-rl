@@ -1,0 +1,64 @@
+% Working title and venue are placeholders; see RESEARCH_TODO.md (Phase 0).
+% To switch venue, change the document class line and the bibliography style.
+\documentclass[conference]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+% Draft markers. Set \drafttrue to \draftfalse for submission: every \todo and \tbd must be gone by then.
+\newif\ifdraft
+\drafttrue
+\setlength{\marginparwidth}{2cm}
+\ifdraft
+  \usepackage[colorinlistoftodos,textsize=scriptsize]{todonotes}
+  \newcommand{\tbd}[1][]{\textcolor{red}{[TBD#1]}}
+\else
+  \usepackage[disable]{todonotes}
+  \newcommand{\tbd}[1][]{}
+\fi
+
+% Shared names so terminology stays consistent across sections.
+\newcommand{\clm}{CLM-8B}
+\newcommand{\clmbase}{base \clm}
+\newcommand{\clmtraffic}{traffic-specialized \clm}
+\newcommand{\sumo}{SUMO}
+\newcommand{\sumorl}{SUMO-RL}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\title{Contrastive Language Models for Traffic Signal Control\\
+\large\tbd[: working title]}
+
+\author{\IEEEauthorblockN{Gab Avispa}
+\IEEEauthorblockA{\tbd[: affiliation]}}
+
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/method}
+\input{sections/experimental_setup}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\ifdraft
+\clearpage
+\listoftodos
+\fi
+
+\end{document}

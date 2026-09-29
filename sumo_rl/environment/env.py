@@ -506,7 +506,7 @@ class SumoEnvironment(gym.Env):
 
     def encode(self, state, ts_id):
         """Encode the state of the traffic signal into a hashable object."""
-        phase = int(np.where(state[: self.traffic_signals[ts_id].num_green_phases] == 1)[0])
+        phase = int(np.where(state[: self.traffic_signals[ts_id].num_green_phases] == 1)[0][0])
         min_green = state[self.traffic_signals[ts_id].num_green_phases]
         density_queue = [self._discretize_density(d) for d in state[self.traffic_signals[ts_id].num_green_phases + 1 :]]
         # tuples are hashable and can be used as key in python dictionary
